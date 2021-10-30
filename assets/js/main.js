@@ -239,3 +239,17 @@
   });
 
 })()
+
+
+
+function shareApp() {
+  if(navigator.share) {
+    navigator.share({
+      title: 'Free App for Students and Teachers',
+      text: 'Manage timetable, save nots, save Exams and download all Tamilnadu school Textbooks. It is free and you can get it at: https://www.kalviapp.in/',
+      url: 'https://www.kalviApp.in'
+    })
+    .then(() => console.log('Share complete'))
+    .error((error) => console.error('Could not share at this time', error))
+  }
+}
